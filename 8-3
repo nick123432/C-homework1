@@ -78,3 +78,27 @@ Complex operator (const Complex& number1, const Complex& number2) {
     Complex multiply(multiplyreal, multiplyimaginary);
     return multiply;
 }
+int main() {
+	Complex number1, number2, computenumber;
+	cout << "Enter your first complex number =>";
+	cin >> number1;
+	cout << "Enter your second complex number =>";
+	cin >> number2;
+
+	cout << "Your first complex number is " << number1;
+	cout << "Your second complex number is " << number2;
+	if (number1 == number2) {
+		cout << "The first complex number and the second complex number are equal." << endl;
+	}
+	else {
+		cout << "The first complex number and the second complex number are not equal." << endl;
+	}
+	computenumber = number1 + number2;
+	cout << "The first complex number plus the second complex number is "<< computenumber ;
+	computenumber = number1 - number2;
+	cout << "The first complex number minus the second complex number is " << computenumber ;
+	computenumber = number1 * number2;
+	cout << "The first complex number multiply by the second complex number is " << computenumber ;
+	
+	return 0;
+}
