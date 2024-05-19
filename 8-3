@@ -1,0 +1,18 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+
+class Complex {
+public:
+    Complex();
+    Complex(double real, double imaginary);
+    friend Complex operator +(const Complex& number1 ,const Complex& number2);
+    friend Complex operator -(const Complex& number1, const Complex& number2);
+    friend Complex operator *(const Complex& number1, const Complex& number2);
+    friend bool operator == (const Complex& number1, const Complex& number2);
+    friend istream& operator >>(istream& inputStream , Complex& number);
+    friend ostream& operator <<(ostream& outputStream, const Complex& number);
+private:
+    double real;
+    double imaginary;
+};
